@@ -1,0 +1,41 @@
+.navbar {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
+}
+
+.nav-link.dropdown-toggle {
+  cursor: pointer;
+}
+
+.ml-auto,
+.mx-auto {
+  margin-left: auto !important;
+}
+
+
+  .navbar-nav .dropdown-menu-end {
+    right: 0;       // dropdown-menu-end прилипає до правого краю
+    left: auto;
+  }
+
+  .navbar-nav .dropdown {
+    position: relative; // щоб dropdown був відносно батька
+  }
+
+  .navbar-brand .logo {
+    max-height: 40px;   // логотип не ламає navbar
+  }
+
+  .navbar-nav .nav-link.dropdown-toggle {
+    cursor: pointer;
+  }
+
+  .language-dropdown .dropdown-menu {
+    right: 0;      // прикріпляємо до правого краю батька
+    left: auto;
+    position: absolute; // обов’язково, щоб не впливало на layout
+  }

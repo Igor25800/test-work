@@ -1,0 +1,55 @@
+<header>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-4">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="https://github.com/ngx-rocket" translate>APP_NAME</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        aria-controls="navbar-menu"
+        aria-label="Toggle navigation"
+        (click)="toggleMenu()"
+        [attr.aria-expanded]="!menuHidden"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div id="navbar-menu" class="collapse navbar-collapse" [ngbCollapse]="menuHidden">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link text-uppercase" routerLink="/home" routerLinkActive="active">
+              <i class="fas fa-home"></i>
+              <span translate>Home</span>
+            </a>
+          </li>
+        </ul>
+
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <app-language-selector
+              [inNavbar]="true"
+              menuClass="dropdown-menu dropdown-menu-end"
+                [placement]="'bottom-end'"
+            ></app-language-selector>
+          </li>
+
+          <li class="nav-item dropdown" ngbDropdown>
+            <a class="nav-link" id="user-dropdown" ngbDropdownToggle>
+              <i class="fas fa-user-circle"></i>
+            </a>
+            <ul ngbDropdownMenu aria-labelledby="user-dropdown" class="dropdown-menu dropdown-menu-end">
+              <li>
+                <h6 class="dropdown-header">
+                  <span translate>Logged in as</span> <b>{{ username }}</b>
+                </h6>
+              </li>
+              <li><hr class="dropdown-divider" /></li>
+              <li>
+                <button class="dropdown-item" (click)="logout()" translate>Logout</button>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>

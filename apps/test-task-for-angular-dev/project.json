@@ -1,0 +1,63 @@
+{
+  "name": "test-task-for-angular-dev",
+  "root": "apps/test-task-for-angular-dev",
+  "sourceRoot": "apps/test-task-for-angular-dev/src",
+  "projectType": "application",
+  "targets": {
+    "build": {
+      "executor": "@angular-devkit/build-angular:browser",
+      "options": {
+        "outputPath": "dist/apps/test-task-for-angular-dev",
+        "index": "apps/test-task-for-angular-dev/src/index.html",
+        "main": "apps/test-task-for-angular-dev/src/main.ts",
+        "polyfills": "apps/test-task-for-angular-dev/src/polyfills.ts",
+        "tsConfig": "apps/test-task-for-angular-dev/tsconfig.app.json",
+        "assets": [
+          {
+            "glob": "**/*",
+            "input": "apps/test-task-for-angular-dev/public",
+            "output": "."
+          },
+          {
+            "glob": "**/*",
+            "input": "apps/test-task-for-angular-dev/src/assets",
+            "output": "assets"
+          }
+        ],
+        "styles": ["apps/test-task-for-angular-dev/src/styles.scss"],
+        "scripts": []
+      },
+      "configurations": {
+        "production": {
+          "optimization": true,
+          "outputHashing": "all",
+          "sourceMap": false
+        },
+        "development": {
+          "optimization": false,
+          "sourceMap": true
+        }
+      }
+    },
+    "serve": {
+      "executor": "@angular-devkit/build-angular:dev-server",
+      "options": {
+        "buildTarget": "test-task-for-angular-dev:build"
+      },
+      "configurations": {
+        "production": {
+          "buildTarget": "test-task-for-angular-dev:build:production"
+        },
+        "development": {
+          "buildTarget": "test-task-for-angular-dev:build:development"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "options": {
+        "lintFilePatterns": ["apps/test-task-for-angular-dev/**/*.ts"]
+      }
+    }
+  }
+}
