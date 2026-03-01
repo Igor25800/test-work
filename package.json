@@ -22,7 +22,7 @@
     "@angular/ssr": "21.1.1",
     "@biesbjerg/ngx-translate-extract-marker": "^1.0.0",
     "@fortawesome/fontawesome-free": "^5.15.1",
-    "@ng-bootstrap/ng-bootstrap": "^15.1.2",
+    "@ng-bootstrap/ng-bootstrap": "^20.0.0",
     "@ngneat/until-destroy": "^10.0.0",
     "@ngx-translate/core": "^14.0.0",
     "@ngx-translate/http-loader": "^7.0.0",
