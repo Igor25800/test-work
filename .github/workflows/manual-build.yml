@@ -25,7 +25,13 @@ jobs:
             ${{ runner.os }}-node-
 
       - name: Install dependencies
-        run: npm install --force
+        run: npm ci
 
       - name: Build test-task-for-angular-dev
         run: npx nx run test-task-for-angular-dev:build --configuration=production
+
+      - name: Build weather
+        run: npx nx run weather:build --configuration=production
+
+      - name: Build block-builder
+        run: npx nx run block-builder:build --configuration=production
