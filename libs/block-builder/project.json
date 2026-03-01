@@ -1,0 +1,13 @@
+{
+  "name": "block-builder-lib",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/block-builder/src",
+  "prefix": "lib",
+  "projectType": "library",
+  "tags": ["type:lib"],
+  "targets": {
+    "lint": {
+      "executor": "@nx/eslint:lint"
+    }
+  }
+}

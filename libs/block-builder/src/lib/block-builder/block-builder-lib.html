@@ -1,0 +1,28 @@
+<div class="container mt-3">
+  @for (block of blocks(); track block; let i = $index) {
+    <div class="row align-items-center mb-2">
+      <div class="col-auto">
+        <select
+          class="form-select form-select-sm"
+          [(ngModel)]="block.key"
+          (ngModelChange)="updateBlockKey(i, $event)">
+          @for (key of keys; track key) {
+            <option [value]="key">{{ key }}</option>
+          }
+        </select>
+      </div>
+
+      <div class="col-auto">
+        <input class="form-control form-control-plaintext" [value]="block.value" readonly />
+      </div>
+
+      <div class="col-auto">
+        <button class="btn btn-outline-primary btn-sm me-1" (click)="moveBlockUp(i)" [disabled]="i === 0">↑</button>
+        <button class="btn btn-outline-primary btn-sm me-1" (click)="moveBlockDown(i)" [disabled]="i === blocks().length - 1">↓</button>
+        <button class="btn btn-outline-danger btn-sm" (click)="removeBlock(i)">✕</button>
+      </div>
+    </div>
+  }
+
+  <button class="btn btn-success btn-sm mt-2" (click)="addBlock()">Додати блок</button>
+</div>

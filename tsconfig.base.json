@@ -19,7 +19,8 @@
       "@core/*": ["apps/test-task-for-angular-dev/src/app/@core/*"],
       "@shared/*": ["apps/test-task-for-angular-dev/src/app/@shared/*"],
       "@app/*": ["apps/test-task-for-angular-dev/src/app/*"],
-      "@org/weather-lib": ["libs/weather/src/index.ts"]
+      "@org/weather-lib": ["libs/weather/src/index.ts"],
+      "@org/block-builder-lib": ["libs/block-builder/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

@@ -4,7 +4,8 @@
   "license": "MIT",
   "scripts": {
     "start:test-task": "nx serve test-task-for-angular-dev",
-    "start:weather": "nx serve weather"
+    "start:weather": "nx serve weather",
+    "start:block-builder": "nx serve block-builder"
   },
   "private": true,
   "dependencies": {

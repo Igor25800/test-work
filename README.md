@@ -1,9 +1,5 @@
 # Nx Angular Repository
 
-run project: 
-npm run start:test-task;
-npm run start:weather;
-
 <a alt="Nx logo" href="https://nx.dev" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-logo.png" width="45"></a>
 
 ✨ A repository showcasing key [Nx](https://nx.dev) features for Angular monorepos ✨
@@ -18,3 +14,4 @@ This repository demonstrates a production-ready Angular monorepo with:
 
   - `npm run start:test-task` 
   - `npm run start:weather`
+  - `npm run start:block-builder`
