@@ -3,7 +3,8 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "start:test-task": "nx serve test-task-for-angular-dev"
+    "start:test-task": "nx serve test-task-for-angular-dev",
+    "start:weather": "nx serve weather"
   },
   "private": true,
   "dependencies": {

@@ -1,0 +1,30 @@
+<div class="card p-3 shadow-sm" style="max-width: 300px;">
+  <h3 class="card-title text-primary mb-3">Weather</h3>
+
+  <div class="mb-3 d-flex gap-2">
+    <input
+      #cityInput
+      class="form-control"
+      placeholder="Enter city" />
+    <button class="btn btn-primary" (click)="load(cityInput.value)">
+      Load
+    </button>
+  </div>
+
+  @if (store.loading()) {
+    <div class="text-info mb-2">Loading...</div>
+  }
+
+  @if (store.error()) {
+    <div class="text-danger mb-2">{{ store.error() }}</div>
+  }
+
+  @let w = store.weather();
+  @if (w) {
+    <div class="card border-0 bg-light p-3">
+      <h4 class="text-secondary">{{ w.city }}</h4>
+      <p class="h2 mb-1">{{ w.temperature }} °C</p>
+      <p class="fst-italic text-muted">{{ w.description }}</p>
+    </div>
+  }
+</div>
